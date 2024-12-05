@@ -37,6 +37,10 @@ jobs:
         with:
           php-version: '8.3'
 
+      - name: Print commit message
+        run: |
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+
       - name: Set up SSH
         run: |
           mkdir ${HOME}/.ssh && chmod 700 ${HOME}/.ssh
